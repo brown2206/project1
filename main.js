@@ -42,7 +42,7 @@ function checkBox(box,dest) {
     return true;
   }
   else {
-    alert("WRONG MOVE!  PLEASE TRY AGAIN!");
+    alert("SOMETHING WENT REALLY WRONG HERE!  PLEASE TRY AGAIN.");
     return false;
   }
   console.log(selectedBox);
