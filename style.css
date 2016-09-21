@@ -21,9 +21,28 @@ h1 {
   color: #FFFFFF;
   text-align: center;
   text-shadow: 4px 4px #5C0000;
+  margin-bottom: 1px;
 }
 
 p {
+  font-family: 'Russo One', sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 4px 4px #5C0000;
+  margin: 1px 0px;
+}
+button {
+  font: inherit;
+  background: none;
+  font-family: 'Russo One', sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 4px 4px #5C0000;
+}
+
+form {
   font-family: 'Russo One', sans-serif;
   font-size: 36px;
   color: #FFFFFF;
