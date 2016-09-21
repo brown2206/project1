@@ -32,9 +32,18 @@ p {
   text-shadow: 4px 4px #5C0000;
   margin: 1px 0px;
 }
+
+ul {
+  font-family: 'Russo One', sans-serif;
+  font-size: 34px;
+  color: #39FF14;
+  text-shadow: 4px 4px #000000;
+  margin: 1px 0px;
+}
+
 button {
   font: inherit;
-  background: none;
+  background: #5C0000;
   font-family: 'Russo One', sans-serif;
   font-size: 36px;
   color: #FFFFFF;
