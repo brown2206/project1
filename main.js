@@ -42,7 +42,8 @@ function checkBox(box,dest) {
     return false;
   }
   console.log(selectedBox);
-}
+};
+
 $(".column").on('click',function(){
   if (active === true) {
     if (checkBox(selectedBox, $(this)) === true) {
@@ -58,9 +59,9 @@ $(".column").on('click',function(){
     pickBox($(this));
     active = true;
   }
-  if ($("#stack3").children().length === 4) {
+  if ($("#stack3").children('.box').length === 4) {
     setTimeout(function() {
-      alert("YOU WIN!");
+      alert("YOU WIN!!!");
     }, 1000);
   }
   else {
