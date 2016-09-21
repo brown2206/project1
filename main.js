@@ -18,12 +18,8 @@ function moveBox(box,dest) {
   console.log(selectedBox);
   dropCount++;
   $("p").html("DROPS: " + dropCount);  //Displays successful drops in p element of HTML.
-  if (parseInt($("#stack3").find('*').attr('data-weight')) === 100) {    //We need to retrieve all of the descendant elements to determine if user is a winner.  However, this isn't working.
-    alert("YOU WIN!");
-  }
-  else {
-    console.log("You're still playing?");
-  }
+  //if (parseInt($("#stack3").find('*').attr('data-weight')) === 100) {    //We need to retrieve all of the descendant elements to determine if user is a winner.  However, this isn't working.
+
   console.log(dropCount);
 };
 
@@ -47,7 +43,6 @@ function checkBox(box,dest) {
   }
   console.log(selectedBox);
 }
-
 $(".column").on('click',function(){
   if (active === true) {
     if (checkBox(selectedBox, $(this)) === true) {
@@ -62,5 +57,13 @@ $(".column").on('click',function(){
   else if (active === false){
     pickBox($(this));
     active = true;
+  }
+  if ($("#stack3").children().length === 4) {
+    setTimeout(function() {
+      alert("YOU WIN!");
+    }, 1000);
+  }
+  else {
+    console.log("You're still playing?");
   }
 });
