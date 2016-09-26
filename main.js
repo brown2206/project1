@@ -43,6 +43,7 @@ function checkBox(box,dest) {
   else if (boxWeight < destWeight) {
     return true;
   }
+  // AM: This condition is also triggered when you try to put a weight back on the same column. Not sure if you want that functionality...
   else {
     // AM: Should replace this with a more useful error phrase (i.e., "This weight is too big for this column!")
     alert("SOMETHING WENT REALLY WRONG HERE!  PLEASE TRY AGAIN.");
