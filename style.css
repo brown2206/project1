@@ -1,6 +1,8 @@
 body {
   background: url("weight_room.jpg");
   background-size: cover;
+  /* AM: Please remove commented-out code from final project submissions. If you want to keep it, consider putting them in a separate branch. */
+  /* AM: This is good practice for the real world, where you shouldn't be shipping out products with code you don't use at all. */
   /*display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +76,7 @@ box-sizing: border-box;
   color: #FFFFFF;
 }
 
+/* AM: Looks like you could also include the height property in your previous selector since all boxes have the same height! */
 #box1 {
   width: 175px;
   height: 100px;
@@ -94,6 +97,7 @@ box-sizing: border-box;
   height: 100px;
 }
 
+/* AM: See my earlier note about commented-out code. */
 /*#stack1, #stack2, #stack3 {
   display: flex;
   align-items: center;
