@@ -1,3 +1,4 @@
+// AM: Consider what this game would look like if you wrapped everything in an object (not necessarily using classes). Would help keep the global namespace a little bit cleaner!
 //Global variables
 var selectedBox;
 var active = false; //active denotes that a weight has been picked up.
@@ -6,9 +7,13 @@ var dropCount = 0;  //Global variable to keep track of successful drops.
 //Functions to play the game of Tower of Hanoi
 function pickBox(column) {
   active = true;
+  // AM: Along the lines of commented-out code, I would also remove any debugging console.log statements from the final submission.
   console.log("hello")
   selectedBox = column.children().eq(0);
+  // AM: Cool!
   selectedBox.effect("shake",{times:4},"slow"); //This is to test effect on selected box.
+  // AM: I think it would be very helpful if when a weight is selected it also changes color. That way you know what is selected just in case you miss the wiggle.
+  // AM: On a related note, it would also be helpful if each column was highlighted when the user hovers over it. That way they know they are about to drop the selected weight in a valid place on the page.
   console.log(selectedBox);
 };
 
@@ -27,6 +32,7 @@ function moveBox(box,dest) {
 function checkBox(box,dest) {
   var boxWeight;
   var destWeight;
+  // AM: I like this system. Nice and concise.
   boxWeight = parseInt(box.attr('data-weight'));
   destWeight = parseInt(dest.children().eq(0).attr('data-weight')) || 0;  //This line of code sets destWeight to the first weight on top of the stack, or 0 if the stack is empty.
   console.log(boxWeight)
@@ -37,7 +43,9 @@ function checkBox(box,dest) {
   else if (boxWeight < destWeight) {
     return true;
   }
+  // AM: This condition is also triggered when you try to put a weight back on the same column. Not sure if you want that functionality...
   else {
+    // AM: Should replace this with a more useful error phrase (i.e., "This weight is too big for this column!")
     alert("SOMETHING WENT REALLY WRONG HERE!  PLEASE TRY AGAIN.");
     return false;
   }
@@ -68,3 +76,4 @@ $(".column").on('click',function(){
     console.log("You're still playing?");
   }
 });
+// AM: Nice, all under 70 lines of code!
